@@ -32,7 +32,7 @@ function useTyping(words: string[]) {
 const stats = [
   { label: "CGPA / 4.0", value: "3.69" },
   { label: "AI projects", value: "10+" },
-  { label: "4th semester rank", value: "1st" },
+  { label: "AI internships", value: "2" },
   { label: "Hackathons", value: "2" },
 ];
 
@@ -72,7 +72,7 @@ export default function HeroSection() {
           <span className="avail">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/nimra.jpg" alt="" width={22} height={22} />
-            <i className="dot" /> Open to work · {profile.location.split(",")[0]}
+            <i className="dot" /> {profile.availability}
           </span>
           <p className="hi">Hi there, I&apos;m</p>
           <h1 className="hero-name">{profile.name}</h1>

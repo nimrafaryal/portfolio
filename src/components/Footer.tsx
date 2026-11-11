@@ -47,7 +47,7 @@ export default function Footer() {
             <p className="foot-h">Contact</p>
             <a href={`mailto:${profile.email}`} className="foot-a foot-ic"><Icon name="mail" size={15} /> Email me</a>
             <span className="foot-a foot-ic"><Icon name="pin" size={15} /> {profile.location}</span>
-            <span className="foot-a foot-ic"><i className="dot" /> Available for new opportunities</span>
+            <span className="foot-a foot-ic"><i className="dot" /> {profile.availability}</span>
           </div>
         </div>
 

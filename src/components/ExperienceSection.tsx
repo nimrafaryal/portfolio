@@ -11,39 +11,45 @@ type Entry = {
   title: string;
   org: string;
   branch: string;
+  kind: string;
   head?: boolean;
   points: string[];
   tags: string[];
   links: { label: string; href: string }[];
 };
 
+const [amd, genesis] = hackathons.map((h, i) => ({
+  id: h.id,
+  period: h.period,
+  title: h.title,
+  org: `${h.project} · ${h.org}`,
+  branch: h.branch,
+  kind: "Hackathon",
+  head: i === 0,
+  points: h.points,
+  tags: h.tags,
+  links: [
+    { label: "Project page", href: h.link },
+    { label: "Certificate", href: h.certificate },
+  ],
+}));
+
 const entries: Entry[] = [
-  ...hackathons.map((h, i) => ({
-    id: h.id,
-    period: h.period,
-    title: `${h.title}`,
-    org: `${h.project} · ${h.org}`,
-    branch: h.branch,
-    head: i === 0,
-    points: h.points,
-    tags: h.tags,
-    links: [
-      { label: "Project page", href: h.link },
-      { label: "Certificate", href: h.certificate },
-    ],
-  })),
+  amd,
   {
-    id: "fyp",
-    period: "Final year",
-    title: "Final Year Project: IoT Forest Monitoring Network",
-    org: "UET Taxila · team of 3",
-    branch: "feat/iot-sensor-network",
+    id: "ezitech",
+    period: "Aug – Sep 2026",
+    title: "Machine Learning Intern",
+    org: "Ezitech · Remote",
+    branch: "feat/personalized-learning",
+    kind: "Internship",
     points: [
-      "Arduino sensor nodes read temperature, humidity and CO₂ and relay them over 433 MHz radio",
-      "Raspberry Pi gateway stores readings in PostgreSQL behind a Flask REST API and a fire-risk dashboard",
+      "Built an AI-personalized learning system that adapts content to each learner instead of one fixed path",
+      "Developed the ML personalization pipeline and served it through a FastAPI backend with PostgreSQL",
+      "Tested and debugged the pipeline on real application flows until the recommendations worked reliably",
     ],
-    tags: ["Raspberry Pi", "Arduino", "Flask", "PostgreSQL"],
-    links: [{ label: "GitHub", href: "https://github.com/nimrafaryal/iot-based-forest-network" }],
+    tags: ["Python", "Machine Learning", "FastAPI", "PostgreSQL"],
+    links: [],
   },
   {
     id: "aspire",
@@ -51,8 +57,38 @@ const entries: Entry[] = [
     title: "Aspire Leaders Program",
     org: "Cohort 4",
     branch: "feat/leadership",
+    kind: "Leadership",
     points: ["Selected for Cohort 4 of the Aspire Leaders Program, a global leadership development program"],
     tags: [],
+    links: [],
+  },
+  {
+    id: "fyp",
+    period: "Final year",
+    title: "Final Year Project: IoT Forest Monitoring Network",
+    org: "UET Taxila · team of 3",
+    branch: "feat/iot-sensor-network",
+    kind: "Project",
+    points: [
+      "My role: designed the PostgreSQL database and built the Flask REST API for sensor data",
+      "Arduino sensor nodes relay temperature, humidity and CO₂ over 433 MHz radio to a Raspberry Pi gateway and fire-risk dashboard",
+    ],
+    tags: ["Flask", "PostgreSQL", "Raspberry Pi", "Arduino"],
+    links: [{ label: "GitHub", href: "https://github.com/nimrafaryal/iot-based-forest-network" }],
+  },
+  genesis,
+  {
+    id: "hiskytech",
+    period: "Jun – Aug 2025",
+    title: "AI & Automation Intern",
+    org: "HiSkyTech · On-site",
+    branch: "feat/ai-automation",
+    kind: "Internship",
+    points: [
+      "Worked on AI and workflow automation projects that help businesses cut repetitive manual work",
+      "Supported AI agent and API integration tasks, connecting tools and processing data across workflows",
+    ],
+    tags: ["AI Agents", "REST APIs", "Workflow Automation"],
     links: [],
   },
 ];
@@ -68,7 +104,7 @@ export default function ExperienceSection() {
           label="Experience"
           title="git log"
           accent="--career"
-          note="Hackathons, my final year project and leadership, newest first."
+          note="Internships, hackathons, my final year project and leadership, newest first."
         />
 
         <ol className="log">
@@ -84,6 +120,7 @@ export default function ExperienceSection() {
                 <div className="panel log-card">
                   <div className="log-top">
                     <div style={{ minWidth: 0 }}>
+                      <span className={`log-kind k-${e.kind.toLowerCase()}`}>{e.kind}</span>
                       <h3>{e.title}</h3>
                       <p className="log-org">@ {e.org}</p>
                     </div>
@@ -132,6 +169,9 @@ export default function ExperienceSection() {
         .log-node i.on { background: var(--violet); box-shadow: 0 0 14px var(--violet); }
         .log-card { padding: 1.3rem 1.5rem; min-width: 0; }
         .log-top { display: flex; justify-content: space-between; gap: 0.75rem 1rem; flex-wrap: wrap; }
+        .log-kind { display: inline-block; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 6px; margin-bottom: 0.45rem; background: rgba(255,255,255,0.06); color: var(--text-2); }
+        .log-kind.k-internship { background: rgba(74,222,128,0.12); color: var(--green); }
+        .log-kind.k-hackathon { background: rgba(167,139,250,0.15); color: var(--violet); }
         .log-top h3 { font-size: 1.12rem; font-weight: 700; letter-spacing: -0.01em; }
         .log-org { color: var(--violet); font-size: 0.9rem; margin-top: 0.15rem; }
         .log-branch { display: inline-flex; align-items: center; gap: 0.35rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-2); height: fit-content; }

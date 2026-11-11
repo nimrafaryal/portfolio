@@ -51,7 +51,7 @@ export default function ContactSection() {
             Let&apos;s build something <span className="grad">useful.</span>
           </h2>
           <p className="ct-lede">
-            Open to AI / ML Engineer roles, internships and project collaborations in machine learning, computer vision and LLM applications.
+            Open to AI / ML Engineer roles and project work in machine learning, LLM apps and computer vision, remote or on-site. I work with teams in Pakistan and clients worldwide.
           </p>
 
           <div className="ct-email">

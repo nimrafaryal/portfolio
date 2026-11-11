@@ -10,7 +10,8 @@ export const profile = {
     "Computer Vision Engineer",
     "AI Application Developer",
   ],
-  location: "Islamabad, Pakistan",
+  location: "Pakistan (GMT+5) · Remote worldwide",
+  availability: "Available for remote & on-site work",
   email: "nimrafaryal2019@gmail.com",
   github: "https://github.com/nimrafaryal",
   linkedin: "https://www.linkedin.com/in/nimra-faryal-47494225b/",
@@ -28,7 +29,7 @@ export const about = {
     "I'm fascinated by what happens when code meets the real world: data starts showing patterns, a model learns to see, and an idea becomes something that actually runs. That curiosity has pulled me across machine learning, deep learning, computer vision, NLP and IoT. I've forecast Walmart sales with a Random Forest, and trained YOLO models that track basketball players, catch shoplifters and spot predators on a farm.",
     "I like looking at a problem from a few angles and bringing different tools together to solve it, whether that's an AI interviewer built on Llama 3.3 and Whisper, a FastAPI security gateway for AI agents, or Raspberry Pi sensor nodes for my final year project. For me, engineering is more than getting a model to train. It starts with understanding the problem and ends with something people can use. I'm always learning, and usually halfway through building something new.",
   ],
-  chips: ["Islamabad", "UET Taxila '26", "Python · PyTorch · FastAPI", "open to work"],
+  chips: ["Remote · worldwide", "UET Taxila '26", "Python · PyTorch · FastAPI", "open to work"],
   terminal: [
     { cmd: "whoami", out: "nimra-faryal · ai / ml engineer" },
     { cmd: "cat focus.txt", out: "ml · deep learning · computer vision · llm apps · iot" },
@@ -243,10 +244,10 @@ export const projects: Project[] = [
     accent: "var(--green)",
     description:
       "Detects predators such as a mongoose on a poultry farm camera, tracks every chicken with its own ID and raises an intrusion warning.",
-    highlights: ["Custom dataset created and annotated in Roboflow", "Trained and retrained a YOLO11 model", "Tracking with ByteTrack and a live count panel"],
-    tech: ["Python", "YOLO11", "Roboflow", "ByteTrack"],
+    highlights: ["Found why a ready-made model failed, then built and labelled my own dataset in Roboflow", "Retrained YOLO11 on a Kaggle GPU", "Tracking with ByteTrack and a live count panel"],
+    tech: ["Python", "YOLO11", "Roboflow", "ByteTrack", "Kaggle"],
     media: [{ type: "video", src: "/videos/farm.mp4", poster: "/videos/farm.jpg" }],
-    links: [],
+    links: [{ label: "LinkedIn demo", href: "https://lnkd.in/p/dsQXfPWf", kind: "linkedin" }],
   },
   {
     id: "drone",
@@ -333,6 +334,7 @@ export const projects: Project[] = [
     description:
       "A low-cost forest monitoring network for early fire-risk awareness. Sensor nodes send temperature, humidity and CO₂ readings over 433 MHz radio to a Raspberry Pi gateway, which stores them in PostgreSQL behind a Flask REST API and dashboard.",
     highlights: [
+      "My role: designed the PostgreSQL database and built the Flask REST API for sensor data",
       "Arduino nodes with DHT11 and MQ135 sensors and multi-hop relaying",
       "Raspberry Pi gateway writes readings to PostgreSQL",
       "Flask REST API for live data, history, alerts and users",
