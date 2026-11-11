@@ -12,6 +12,7 @@ type Entry = {
   org: string;
   branch: string;
   kind: string;
+  desc?: string;
   head?: boolean;
   points: string[];
   tags: string[];
@@ -40,7 +41,8 @@ const entries: Entry[] = [
     id: "ezitech",
     period: "Aug – Sep 2026",
     title: "Machine Learning Intern",
-    org: "Ezitech · Remote",
+    org: "Ezitech · Rawalpindi (Remote)",
+    desc: "Built an AI-personalized learning system end to end, from the ML pipeline that tailors content to each learner to the FastAPI and PostgreSQL backend that serves it.",
     branch: "feat/personalized-learning",
     kind: "Internship",
     points: [
@@ -81,7 +83,8 @@ const entries: Entry[] = [
     id: "hiskytech",
     period: "Jun – Aug 2025",
     title: "AI & Automation Intern",
-    org: "HiSkyTech · On-site",
+    org: "HiSkyTech · Sargodha (On-site)",
+    desc: "Worked on AI and workflow automation for businesses, connecting AI agents and APIs so repetitive manual tasks run on their own.",
     branch: "feat/ai-automation",
     kind: "Internship",
     points: [
@@ -126,6 +129,8 @@ export default function ExperienceSection() {
                     </div>
                     <span className="log-branch"><Icon name="branch" size={13} /> {e.branch}</span>
                   </div>
+
+                  {e.desc && <p className="log-desc">{e.desc}</p>}
 
                   {open && (
                     <ul className="log-points">
@@ -175,6 +180,7 @@ export default function ExperienceSection() {
         .log-top h3 { font-size: 1.12rem; font-weight: 700; letter-spacing: -0.01em; }
         .log-org { color: var(--violet); font-size: 0.9rem; margin-top: 0.15rem; }
         .log-branch { display: inline-flex; align-items: center; gap: 0.35rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-2); height: fit-content; }
+        .log-desc { color: var(--text-2); font-size: 0.95rem; line-height: 1.65; margin-top: 0.75rem; max-width: 72ch; }
         .log-points { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
         .log-points li { display: flex; gap: 0.7rem; color: var(--text-2); font-size: 0.93rem; line-height: 1.6; }
         .log-points li span { color: var(--green); font-family: var(--font-mono); }
