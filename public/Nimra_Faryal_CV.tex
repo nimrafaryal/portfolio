@@ -1,0 +1,159 @@
+%-------------------------------------------------------------
+% Nimra Faryal - CV (LaTeX, ATS-friendly, one column)
+% Compile with: pdflatex Nimra_Faryal_CV.tex  (or upload to Overleaf)
+%-------------------------------------------------------------
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.45in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{\vspace{-5pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% ---------- helpers ----------
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \small\textit{#3} & \small\textit{#4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\begin{document}
+
+% ---------- heading ----------
+\begin{center}
+    {\Huge \scshape Nimra Faryal} \\ \vspace{2pt}
+    \textbf{AI / ML Engineer} \\ \vspace{3pt}
+    \small Islamabad, Pakistan $|$ +92 312 7835867 $|$
+    \href{mailto:nimrafaryal2019@gmail.com}{nimrafaryal2019@gmail.com} $|$
+    \href{https://www.linkedin.com/in/nimra-faryal-47494225b/}{linkedin.com/in/nimra-faryal} $|$
+    \href{https://github.com/nimrafaryal}{github.com/nimrafaryal}
+\end{center}
+
+% ---------- summary ----------
+\section{Summary}
+\small{Computer Science graduate from UET Taxila (CGPA 3.69/4.00) with hands-on projects in machine learning, deep learning,
+computer vision, NLP and LLM applications, backend APIs and IoT. I train models on real-world data and build them into working
+systems.}
+
+% ---------- education ----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of Engineering and Technology (UET), Taxila}{Sep 2022 -- Jul 2026}
+    {BS Computer Science -- CGPA 3.69/4.00}{Taxila, Pakistan}
+    \resumeItemListStart
+      \resumeItem{Merit Scholarship for 1st position in the CS-22 batch in 4th semester (SGPA 3.95); Prime Minister Laptop Scheme awardee.}
+      \resumeItem{Coursework: Artificial Intelligence, Natural Language Processing, Big Data Analytics, Databases, Artificial Neural Networks.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% ---------- skills ----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.0in, label={}]
+  \small{\item{
+    \textbf{Machine Learning:} Scikit-Learn, Regression, Classification, Random Forest, Feature Engineering, EDA, Pandas, NumPy, Matplotlib, Seaborn \\
+    \textbf{Deep Learning \& Vision:} PyTorch, CNNs, Transfer Learning, YOLOv8/v11 (OBB, Pose), ByteTrack, Re-ID, OpenCV, Homography, MediaPipe, Roboflow \\
+    \textbf{NLP \& LLMs:} Hugging Face Transformers, BERT, Whisper, Groq API, Llama, OpenAI API, Prompt Engineering, RAG, Qdrant \\
+    \textbf{Backend \& Data:} Python, C++, SQL, FastAPI, Flask, REST APIs, PostgreSQL, SQLite, Pytest, Streamlit \\
+    \textbf{IoT \& Tools:} Raspberry Pi, Arduino, Sensor Integration, Wireless Sensor Networks, Git/GitHub, Google Colab, Kaggle
+  }}
+\end{itemize}
+
+% ---------- hackathons ----------
+\section{Hackathon Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {AMD Developer Hackathon: ACT III -- lablab.ai}{Oct 2026}
+    {ACTION GATE: AI Agent Security Gateway (Team Veylora)}{\href{https://github.com/nimrafaryal/action-gate}{GitHub}}
+    \resumeItemListStart
+      \resumeItem{Built a gateway that decides whether an AI agent's planned actions are allowed, need human approval or are blocked, with policy checks, sequence risk analysis and consequence replay.}
+      \resumeItem{FastAPI backend with DeepSeek V3 on AMD Developer Cloud and a Streamlit dashboard; 52 automated tests and 16/16 red-team scenarios detected.}
+    \resumeItemListEnd
+  \resumeSubheading
+    {AI Genesis Hackathon -- lablab.ai}{Nov 2025}
+    {Multimodal Insurance Claims Processor (Team Stellar Engineers)}{Python, Qdrant, BERT, OpenAI}
+    \resumeItemListStart
+      \resumeItem{Team project using Qdrant vector search to find and rank similar past insurance claims to support claim decisions.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% ---------- projects ----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading{\textbf{IoT Forest Monitoring Network} (Final Year Project) $|$ \emph{Raspberry Pi, Arduino, Flask, PostgreSQL}}{\href{https://github.com/nimrafaryal/iot-based-forest-network}{GitHub}}
+    \resumeItemListStart
+      \resumeItem{Arduino sensor nodes (temperature, humidity, CO$_2$) send readings over 433 MHz radio to a Raspberry Pi gateway that stores them in PostgreSQL behind a Flask REST API and fire-risk dashboard.}
+    \resumeItemListEnd
+  \resumeProjectHeading{\textbf{Walmart Weekly Sales Forecasting} $|$ \emph{Python, Pandas, Scikit-Learn, Matplotlib}}{\href{https://github.com/nimrafaryal/walmart-weekly-sales-forecasting}{GitHub}}
+    \resumeItemListStart
+      \resumeItem{Cleaned and merged store, sales and economic data, engineered features and trained a Random Forest regressor (R$^2$ = 0.945, RMSE = 15,230).}
+    \resumeItemListEnd
+  \resumeProjectHeading{\textbf{AI Interview Studio} $|$ \emph{Groq API, Llama 3.3 70B, Whisper, MediaPipe, YOLOv8n, Streamlit}}{\href{https://github.com/nimrafaryal/ai-interview-studio}{GitHub}}
+    \resumeItemListStart
+      \resumeItem{LLM generates role-specific questions and scores answers transcribed by Whisper; live proctoring tracks gaze and detects phones to give a 0--100 integrity score, with HTML, CSV and JSON reports.}
+    \resumeItemListEnd
+  \resumeProjectHeading{\textbf{CCTV Suspicious Behaviour Detection} $|$ \emph{YOLO11-Pose, ByteTrack, OpenCV}}{Featured on LinkedIn}
+    \resumeItemListStart
+      \resumeItem{Pose-keypoint rules over shelf zones score each tracked customer and fire live alerts; flagged a grab-and-pocket 0.9 s after the grab on test footage.}
+    \resumeItemListEnd
+  \resumeProjectHeading{\textbf{Farm Predator Detection} $|$ \emph{YOLO11, Roboflow, ByteTrack}}{}
+    \resumeItemListStart
+      \resumeItem{Built and annotated a custom dataset, trained and retrained a YOLO11 model to detect predators and track poultry with live intrusion alerts.}
+    \resumeItemListEnd
+  \resumeProjectHeading{\textbf{AI Basketball Analytics \& Live Commentary} $|$ \emph{YOLO, ByteTrack, Re-ID, Homography, ElevenLabs}}{}
+    \resumeItemListStart
+      \resumeItem{Fine-tuned YOLO for players, ball, rim and referees; kept IDs through occlusions, measured speed with homography and added voice commentary.}
+    \resumeItemListEnd
+  \resumeProjectHeading{\textbf{Drone Vehicle Detection, PPE Detection \& Object Counting} $|$ \emph{YOLO11s-OBB, YOLOv11, OpenCV}}{}
+    \resumeItemListStart
+      \resumeItem{Rotated-box vehicle detection on drone footage, a custom 7-class PPE model with worker tracking, and line-based counting of vehicles and conveyor oranges.}
+    \resumeItemListEnd
+  \resumeProjectHeading{\textbf{AI Squat \& Push-up Coach} and \textbf{Sentiment Analysis Web App} $|$ \emph{MediaPipe, Hugging Face, Streamlit}}{}
+    \resumeItemListStart
+      \resumeItem{Rep counting and form scoring out of 100 from pose keypoints on CPU; Transformers-based positive/negative text classifier with confidence scores.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% ---------- achievements ----------
+\section{Achievements \& Certifications}
+\begin{itemize}[leftmargin=0.18in, itemsep=0pt]
+  \small{
+  \item 5th position, Logic and Code Clash Round II (A\&D Tech Innovations); Aspire Leaders Program, Cohort 4 (2026); UET Women's Basketball Team (2023--2025); Bronze medal, badminton singles, UET Taxila.
+  \item Certifications: Introduction to Generative AI (Google Cloud); Introduction and Intermediate SQL (DataCamp); hackathon completion certificates, AMD Developer Hackathon ACT III and AI Genesis (lablab.ai).
+  }
+\end{itemize}
+
+\end{document}
