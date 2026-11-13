@@ -37,22 +37,7 @@ const [amd, genesis] = hackathons.map((h, i) => ({
 
 const entries: Entry[] = [
   amd,
-  {
-    id: "ezitech",
-    period: "Aug – Sep 2026",
-    title: "Machine Learning Intern",
-    org: "Ezitech · Rawalpindi (Remote)",
-    desc: "Built an AI-personalized learning system end to end, from the ML pipeline that tailors content to each learner to the FastAPI and PostgreSQL backend that serves it.",
-    branch: "feat/personalized-learning",
-    kind: "Internship",
-    points: [
-      "Built an AI-personalized learning system that adapts content to each learner instead of one fixed path",
-      "Developed the ML personalization pipeline and served it through a FastAPI backend with PostgreSQL",
-      "Tested and debugged the pipeline on real application flows until the recommendations worked reliably",
-    ],
-    tags: ["Python", "Machine Learning", "FastAPI", "PostgreSQL"],
-    links: [],
-  },
+
   {
     id: "aspire",
     period: "2026",
@@ -79,21 +64,7 @@ const entries: Entry[] = [
     links: [{ label: "GitHub", href: "https://github.com/nimrafaryal/iot-based-forest-network" }],
   },
   genesis,
-  {
-    id: "hiskytech",
-    period: "Jun – Aug 2025",
-    title: "AI & Automation Intern",
-    org: "HiSkyTech · Sargodha (On-site)",
-    desc: "Worked on AI and workflow automation for businesses, connecting AI agents and APIs so repetitive manual tasks run on their own.",
-    branch: "feat/ai-automation",
-    kind: "Internship",
-    points: [
-      "Worked on AI and workflow automation projects that help businesses cut repetitive manual work",
-      "Supported AI agent and API integration tasks, connecting tools and processing data across workflows",
-    ],
-    tags: ["AI Agents", "REST APIs", "Workflow Automation"],
-    links: [],
-  },
+
 ];
 
 export default function ExperienceSection() {
@@ -107,7 +78,7 @@ export default function ExperienceSection() {
           label="Experience"
           title="git log"
           accent="--career"
-          note="Internships, hackathons, my final year project and leadership, newest first."
+          note="Hackathons, my final year project and leadership, newest first."
         />
 
         <ol className="log">

@@ -32,7 +32,7 @@ function useTyping(words: string[]) {
 const stats = [
   { label: "CGPA / 4.0", value: "3.69" },
   { label: "AI projects", value: "10+" },
-  { label: "AI internships", value: "2" },
+  { label: "4th semester rank", value: "1st" },
   { label: "Hackathons", value: "2" },
 ];
 
